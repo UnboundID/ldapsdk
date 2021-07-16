@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ ! Copyright 2009-2017 Ping Identity Corporation
+ ! All Rights Reserved.
+ -->
+<!--
+ ! Copyright (C) 2009-2017 Ping Identity Corporation
+ !
+ ! This program is free software; you can redistribute it and/or modify
+ ! it under the terms of the GNU General Public License (GPLv2 only)
+ ! or the terms of the GNU Lesser General Public License (LGPLv2.1 only)
+ ! as published by the Free Software Foundation.
+ !
+ ! This program is distributed in the hope that it will be useful,
+ ! but WITHOUT ANY WARRANTY; without even the implied warranty of
+ ! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ ! GNU General Public License for more details.
+ !
+ ! You should have received a copy of the GNU General Public License
+ ! along with this program; if not, see <http://www.gnu.org/licenses>.
+ -->
+
+<resources>
+
+  <!--
+   ! Strings used in the manifest.
+   -->
+  <string name="app_name">Client LDAP</string>
+
+  <string name="activity_label">Client LDAP d’UnboundID</string>
+
+  <string name="empty_string" />
+
+
+
+  <!--
+   ! Strings used by the layout_define_server layout.
+   -->
+  <string name="layout_define_server_label_id">Identifiant du serveur (identifie ce serveur de manière unique)</string>
+
+  <string name="layout_define_server_label_host">Adresse du serveur LDAP (adresse IP ou nom d’hôte)</string>
+
+  <string name="layout_define_server_label_port">Port du serveur LDAP (1 - 65535)</string>
+
+  <string name="layout_define_server_label_security_type">Type de sécurité</string>
+
+  <string name="layout_define_server_label_bind_dn">Identifiant de connexion (vide = anonyme)</string>
+
+  <string name="layout_define_server_label_bind_pw">Mot de passe de connexion (vide si anonyme)</string>
+
+  <string name="layout_define_server_label_base_dn">Nom distingué de base (serveur entier si vide)</string>
+
+  <string name="layout_define_server_button_label_test">Tester les paramètres</string>
+
+  <string name="layout_define_server_button_label_save">Enregistrer les paramètres</string>
+
+
+
+  <!--
+   ! Strings used by the layout_list_servers layout.
+   -->
+  <string name="layout_list_servers_button_label_new_server">Nouveau serveur</string>
+
+
+
+  <!--
+   ! Strings used by the layout_popup layout.
+   -->
+  <string name="layout_popup_button_label_ok">Valider</string>
+
+
+
+  <!--
+   ! Strings used by the layout_search_server layout.
+   -->
+  <string name="layout_search_server_label_search_type">Type de recherche</string>
+
+  <string name="layout_search_server_label_search_text">Texte à rechercher</string>
+
+  <string name="layout_search_server_button_label_search">Chercher</string>
+
+
+
+  <!--
+   ! Strings used by the AddServer activity.
+   -->
+  <string name="add_server_security_type_none">aucune</string>
+
+  <string name="add_server_security_type_ssl">SSL/TLS</string>
+
+  <string name="add_server_security_type_start_tls">
+    StartTLS
+  </string>
+
+  <array name="add_server_security_type_list">
+    <item>@string/add_server_security_type_none</item>
+    <item>@string/add_server_security_type_ssl</item>
+    <item>@string/add_server_security_type_start_tls</item>
+  </array>
+
+  <string name="add_server_err_port_not_int">Le numéro de port doit être un entier naturel.</string>
+
+  <string name="add_server_popup_title_failed">Échec du test</string>
+
+  <string name="add_server_popup_text_failed">
+    Les paramètres du serveur LDAP sont incorrects ou le serveur est injoignable. Les raisons de l’échec sont : %s
+  </string>
+
+  <string name="add_server_progress_text">Test des paramètres du serveur LDAP en cours…</string>
+
+  <string name="add_server_popup_title_success">Succès du test</string>
+
+  <string name="add_server_popup_text_success">
+    Les paramètres LDAP fournis semblent corrects.
+   </string>
+
+  <string name="add_server_err_server_id_already_in_use">
+    Un autre serveur utilise déjà l’identifiant de serveur « %s ».
+  </string>
+
+
+
+  <!--
+   ! Strings used by the AddToContactsOnClickListener class.
+   -->
+  <string name="add_to_contacts_popup_title_error">
+    ERREUR
+  </string>
+
+  <string name="add_to_contacts_popup_text_error">
+    Impossible d’ajouter l’utilisateur « %s » aux contacts.
+  </string>
+
+
+
+  <!--
+   ! Strings used by the AttributeMapper class.
+   -->
+  <string name="attribute_mapper_name_cn">
+    Nom complet
+  </string>
+
+  <string name="attribute_mapper_name_departmentNumber">
+    Numéro de service
+  </string>
+
+  <string name="attribute_mapper_name_description">
+    Description
+  </string>
+
+  <string name="attribute_mapper_name_displayName">
+    Nom affiché
+  </string>
+
+  <string name="attribute_mapper_name_employeeNumber">
+    Numéro d’employé
+  </string>
+
+  <string name="attribute_mapper_name_facsimileTelephoneNumber">
+    Numéro de Fax
+  </string>
+
+  <string name="attribute_mapper_name_givenName">
+    Prénom
+  </string>
+
+  <string name="attribute_mapper_name_homePhone">
+    Téléphone du domicile
+  </string>
+
+  <string name="attribute_mapper_name_homePostalAddress">
+    Adresse du domicile
+  </string>
+
+  <string name="attribute_mapper_name_initials">
+    Initiales
+  </string>
+
+  <string name="attribute_mapper_name_jpegPhoto">
+    Photo JPEG
+  </string>
+
+  <string name="attribute_mapper_name_l">
+    Ville
+  </string>
+
+  <string name="attribute_mapper_name_labeledURI">
+    Site Web
+  </string>
+
+  <string name="attribute_mapper_name_mail">
+    Adresse de courriel
+  </string>
+
+  <string name="attribute_mapper_name_mailAlternateAddress">
+    Adresse de courriel alternative
+  </string>
+
+  <string name="attribute_mapper_name_mobile">
+    Téléphone mobile
+  </string>
+
+  <string name="attribute_mapper_name_o">
+    Organisme
+  </string>
+
+  <string name="attribute_mapper_name_pager">
+    Numéro de radiomessagerie
+  </string>
+
+  <string name="attribute_mapper_name_photo">
+    Photo
+  </string>
+
+  <string name="attribute_mapper_name_postalAddress">
+    Adresse postale
+  </string>
+
+  <string name="attribute_mapper_name_postalCode">
+    Code postal
+  </string>
+
+  <string name="attribute_mapper_name_postOfficeBox">
+    Boîte postale
+  </string>
+
+  <string name="attribute_mapper_name_preferredLanguage">
+    Langue préférée
+  </string>
+
+  <string name="attribute_mapper_name_roomNumber">
+    Numéro de chambre
+  </string>
+
+  <string name="attribute_mapper_name_sn">
+    Nom de famille
+  </string>
+
+  <string name="attribute_mapper_name_st">
+    État/province
+  </string>
+
+  <string name="attribute_mapper_name_street">
+    Rue
+  </string>
+
+  <string name="attribute_mapper_name_telephoneNumber">
+    Numéro de téléphone
+  </string>
+
+  <string name="attribute_mapper_name_title">
+    Fonction
+  </string>
+
+  <string name="attribute_mapper_name_uid">
+    Nom d’utilisateur
+  </string>
+
+
+
+  <!--
+   ! Strings used by the EditServer activity.
+   -->
+  <string name="edit_server_security_type_none">
+    aucun
+  </string>
+
+  <string name="edit_server_security_type_ssl">
+    SSL/TLS
+  </string>
+
+  <string name="edit_server_security_type_start_tls">
+    StartTLS
+  </string>
+
+  <array name="edit_server_security_type_list">
+    <item>@string/edit_server_security_type_none</item>
+    <item>@string/edit_server_security_type_ssl</item>
+    <item>@string/edit_server_security_type_start_tls</item>
+  </array>
+
+  <string name="edit_server_progress_text">
+    Test des paramètres du serveur…
+  </string>
+
+  <string name="edit_server_err_port_not_int">
+    Le numéro de port doit être un entier naturel.
+  </string>
+
+  <string name="edit_server_popup_title_failed">
+    Échec du test
+  </string>
+
+  <string name="edit_server_popup_text_failed">
+    Les paramètres du serveur LDAP sont incorrects ou le serveur est injoignable.
+    Les raisons de l’échec sont : %s
+  </string>
+
+  <string name="edit_server_popup_title_success">
+    Succès du test
+  </string>
+
+  <string name="edit_server_popup_text_success">
+    Les paramètres LDAP fournis semblent corrects.
+  </string>
+
+
+
+  <!--
+   ! Strings used by the EMailAddressOptions activity.
+   -->
+  <string name="email_address_options_title">
+    Adresse de courriel « %s »
+  </string>
+
+  <string name="email_address_options_option_mail">
+    Envoyer un courriel
+  </string>
+
+  <string name="email_address_options_option_copy">
+    Copier l’adresse dans le presse‐papiers
+  </string>
+
+
+
+  <!--
+   ! Strings used by the GenericAttributeOptions activity.
+   -->
+  <string name="generic_attr_options_title">
+    Valeur de l’attribut « %s »
+  </string>
+
+  <string name="generic_attr_options_option_copy">
+    Copier la valeur dans le presse‐papiers
+  </string>
+
+
+
+  <!--
+   ! Strings used by the HeaderOptions activity.
+   -->
+  <string name="header_options_title">
+    Enregistrement « %s »
+  </string>
+
+  <string name="header_options_option_view_ldif">
+    Afficher l’enregitrement au format LDIF
+  </string>
+
+  <string name="header_options_option_copy_dn">
+    Copier le nom distingué dans le presse‐papiers
+  </string>
+
+  <string name="header_options_option_copy_ldif">
+    Copier les données LDIF dans le presse‐papiers
+  </string>
+
+
+
+  <!--
+   ! Strings used by the LDAPClient activity.
+   -->
+  <string name="ldap_client_popup_title_error">
+    ERREUR
+  </string>
+
+  <string name="ldap_client_popup_text_error">
+    Une erreur est survenue lors de la tentative de récupération de la liste des serveurs :  %s
+  </string>
+
+  <string name="ldap_client_parenthetical_using_ssl">
+    (avec SSL/TLS)
+  </string>
+
+  <string name="ldap_client_parenthetical_using_start_tls">
+    (avec StartTLS)
+  </string>
+
+
+
+  <!--
+   ! Strings used by the ListSearchResults activity.
+   -->
+  <string name="list_search_results_activity_title">
+    Nombre de résultats retournés par la recherche : %d
+  </string>
+
+
+
+  <!--
+   ! Strings used by the ListSearchResultsOptions activity.
+   -->
+  <string name="list_search_results_options_title">
+    Enregistrement « %s »
+  </string>
+
+  <string name="list_search_results_options_option_view_formatted">
+    Afficher l’enregistrement formaté
+  </string>
+
+  <string name="list_search_results_options_option_view_ldif">
+    Afficher les données au format LDIF
+  </string>
+
+  <string name="list_search_results_options_option_copy_dn">
+    Copier le nom distingué dans le presse‐papiers
+  </string>
+
+  <string name="list_search_results_options_option_copy_ldif">
+    Copier les données LDIF dans le presse‐papiers
+  </string>
+
+
+
+  <!--
+   ! Strings used by the ListServerOptions activity.
+   -->
+  <string name="list_server_options_title">
+    Serveur LDAP « %s »
+  </string>
+
+  <string name="list_server_options_option_search">
+    Rechercher sur ce serveur
+  </string>
+
+  <string name="list_server_options_option_edit">
+    Éditer les paramètres de ce serveur
+  </string>
+
+  <string name="list_server_options_option_remove">
+    Supprimer ce serveur
+  </string>
+
+  <string name="list_server_options_popup_title_removed">
+    Serveur supprimé
+  </string>
+
+  <string name="list_server_options_popup_text_removed">
+    Suppression du serveur « %s » effectuée.
+  </string>
+
+  <string name="list_server_options_popup_title_error">
+    ERREUR
+  </string>
+
+  <string name="list_server_options_popup_text_error">
+    Suppression du serveur « %1$s » impossible : %2$s
+  </string>
+
+
+
+  <!--
+   ! Strings used by the PhoneNumberOptions activity.
+   -->
+  <string name="phone_number_options_title">
+    Numéro de téléphone « %s »
+  </string>
+
+  <string name="phone_number_options_option_dial">
+    Appeler ce numéro
+  </string>
+
+  <string name="phone_number_options_option_sms">
+    Envoyer un message SMS
+  </string>
+
+  <string name="phone_number_options_option_copy">
+    Copier le numéro dans le presse‐papiers
+  </string>
+
+
+
+  <!--
+   ! Strings used by the PostalAddressOptions activity.
+   -->
+  <string name="postal_address_options_title">
+    Adresse postale « %s »
+  </string>
+
+  <string name="postal_address_options_option_map">
+    Afficher cette adresse sur une carte
+  </string>
+
+  <string name="postal_address_options_option_navigate">
+    Naviguer vers cette adresse
+  </string>
+
+  <string name="postal_address_options_option_copy">
+    Copier l’adresse dans le presse‐papiers
+  </string>
+
+
+
+  <!--
+   ! Strings used by the SearchServer activity.
+   -->
+  <string name="search_server_search_type_sn">
+    Nom de famille
+  </string>
+
+  <string name="search_server_search_type_givenName">
+    Prénom
+  </string>
+
+  <string name="search_server_search_type_cn">
+    Nom complet
+  </string>
+
+  <string name="search_server_search_type_mail">
+    Adresse de courriel
+  </string>
+
+  <string name="search_server_search_type_uid">
+    Nom d’utilisateur
+  </string>
+
+  <string name="search_server_search_type_custom">
+    Filtre de recherche personnalisé
+  </string>
+
+  <array name="search_server_search_type_list">
+    <item>@string/search_server_search_type_sn</item>
+    <item>@string/search_server_search_type_givenName</item>
+    <item>@string/search_server_search_type_cn</item>
+    <item>@string/search_server_search_type_mail</item>
+    <item>@string/search_server_search_type_uid</item>
+    <item>@string/search_server_search_type_custom</item>
+  </array>
+
+  <string name="search_server_popup_title_no_search_text">
+    Aucun texte à rechercher
+  </string>
+
+  <string name="search_server_popup_text_no_search_text">
+    Veuillez préciser une valeur dans le champ « Texte à rechercher ».
+  </string>
+
+  <string name="search_server_popup_title_invalid_filter">
+    Filtre incorrect
+  </string>
+
+  <string name="search_server_popup_text_invalid_filter">
+    Le filtre de recherche généré « %1$s » est incorrect : %2$s
+  </string>
+
+  <string name="search_server_progress_searching">
+    Recherche en cours…
+  </string>
+
+  <string name="search_server_popup_title_size_limit_exceeded">
+    Taille maximale dépassée
+  </string>
+
+  <string name="search_server_popup_text_size_limit_exceeded">
+    Les critères du filtre de recherche correspondent à %d enregistrements. 
+    Veuillez spécifier des critères de recherche plus précis.
+  </string>
+
+  <string name="search_server_popup_title_time_limit_exceeded">
+    Durée maximale dépassée
+  </string>
+
+  <string name="search_server_popup_text_time_limit_exceeded">
+    Le serveur n’a pu effectué la recherche dans la limite du temps imparti 
+    de %d secondes. Veuillez spécifier des critères de recherche plus précis.
+  </string>
+
+  <string name="search_server_popup_title_search_error">
+    Échec de la recherche
+  </string>
+
+  <string name="search_server_popup_text_search_error">
+    Une erreur inattendue est survenue durant la recherche : %1$s
+    (code de retour : %2$s).
+  </string>
+
+  <string name="search_server_popup_title_no_entries_returned">
+    Aucun résultat retourné
+  </string>
+
+  <string name="search_server_popup_text_no_entries_returned">
+    Le serveur n’a retourné aucune entrée correspondant aux critères de recherche précisés.
+  </string>
+
+
+
+  <!--
+   ! Strings used by the ServerInstance class.
+   -->
+  <string name="server_instance_err_empty_id">
+    L’identifiant du serveur doit être une chaîne de caractères non vide.
+  </string>
+
+  <string name="server_instance_err_empty_address">
+    L’adresse du serveur doit être une chaîne de caractères non vide.
+  </string>
+
+  <string name="server_instance_err_invalid_port">
+    Le port du serveur LDAP doit être un entier entre 1 et 65535.
+  </string>
+
+  <string name="server_instance_err_cannot_combine_ssl_and_start_tls">
+    Les modes SSL/TLS et StartTLS ne peuvent être utilisés simultanément.
+  </string>
+
+  <string name="server_instance_err_mismatched_bind_dn_and_pw">
+    Le nom distingué et le mot de passe de l’utilisateur de connexion 
+    doivent être soit tous les deux vides, soit tous les deux non vides.
+  </string>
+
+  <string name="server_instance_err_invalid_bind_dn">
+    Le nom distingué de connexion semble incorrect : %s
+  </string>
+
+  <string name="server_instance_err_invalid_base_dn">
+   Le nom distingué de base semble incorrect : %s
+  </string>
+
+  <string name="server_instance_err_cannot_initialize_ssl">
+    Une erreur est survenue lors de la tentative d’initialisation de la 
+    fabrique de sockets SSL : %s
+  </string>
+
+  <string name="server_instance_err_start_tls_failed">
+    Une erreur est survenue lors de la tentative de négociation de 
+    chiffrement TLS explicite « StartTLS » : %s
+  </string>
+
+
+
+  <!--
+   ! Strings used by the TestServerThread class.
+   -->
+  <string name="test_server_thread_cannot_get_base">
+    L’entrée de base « %s » n’existe pas ou ne peut être retrouvée.
+  </string>
+
+</resources>
